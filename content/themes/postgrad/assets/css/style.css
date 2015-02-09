@@ -129,9 +129,27 @@ ul.side-nav {
   color: #e2e2e2;
 }
 
-.post img:hover {
+.post .pinItWrapper:hover img {
   background: #fff;
-  opacity: 0.4;
+  opacity: 0.9;
+}
+
+.post .pinItWrapper:hover .pinItButton {
+  display: block;
+}
+
+.pinItButton {
+  display:none;
+  width: 113px;
+  height: 117px;
+  background: url('../img/pinit-button.png');
+  margin: -147px 0px 0 0;
+  z-index: 999;
+  position: relative;
+  float:right;
+  right: 40px;
+  bottom: 0px;
+  opacity: 1.0 !important;
 }
 
 /* END MAIN CONTENT AREA WITH SIDEBAR */

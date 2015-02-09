@@ -74,6 +74,21 @@
 
 
 
+
+
+    });
+
+    // Add pin it buttons
+    $(function(){
+      var imagesToPin = $(".post img");
+      var url = $(imagesToPin).context.URL;
+      console.log(imagesToPin);
+      var res = encodeURI(url);
+      var media = "http://"+window.location.host+$(imagesToPin).attr('src');
+      var mediaRes = encodeURI(media);
+      $(imagesToPin).parent().addClass('pinItWrapper');
+      $(imagesToPin).parent().append("<a href='http://pinterest.com/pin/create/button/?url="+res+"&media="+mediaRes+"&description="+"' target='_blank' class='pinItButton'></a>");
+
     });
 
     // fixed navigation scroll function
