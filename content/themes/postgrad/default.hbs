@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>{{meta_title}}</title>
+  <meta name="description" content="{{meta_description}}" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="{{asset "favicon/favicon.ico"}}">
+  <link rel="stylesheet" type="text/css" href="{{asset "css/normalize.css"}}" />
+  <link rel="stylesheet" type="text/css" href="{{asset "css/materialize.css"}}" />
+  <link rel="stylesheet" type="text/css" href="{{asset "css/fonts.css"}}" />
+  <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
+
+  {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+
+  {{> header}}
+
+  <div class="container">
+
+
+    {{{body}}}
+
+
+  </div>
+
+  <footer class="main-footer valign-wrapper">
+    <section class="center-align valign"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
+    {{ghost_foot}}
+  </footer>
+
+  <section class="section-slideup">
+    <div class="content">
+      <h2 style="margin-top: 0px; margin-bottom: 0px;">POPUP</h2>
+      <p>Here is the main section for the content</p>
+    </div>
+  </section>
+
+  {{! import javascript scripts}}
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="{{asset "js/materialize.js"}}"></script>
+
+  <script type="text/javascript">
+
+    // everything document ready
+    $( document ).ready(function(){
+      $(".button-collapse").sideNav();
+
+    });
+
+    // fixed navigation scroll function
+    $(function() {
+      //caches a jQuery object containing the header element
+      var header = $(".fixed-header");
+      $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 170) {
+          header.addClass("show-fixed");
+        } else {
+          header.removeClass("show-fixed");
+        }
+      });
+    });
+
+    // slideup
+    $(function() {
+      //caches a jQuery object containing the header element
+      var popup = $(".section-slideup");
+      $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 800) {
+          popup.addClass("slideup");
+        } else {
+          popup.removeClass("slideup");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

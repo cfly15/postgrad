@@ -1,0 +1,140 @@
+/* Custom Styling for Post Grad. Using one file instead of components for easy transition to other platforms */
+
+/* GENERAL */
+
+/*
+1. Fonts
+2. Colors
+3. Typography Classes
+*/
+
+
+html, body, p {
+  font-family: 'Gudea';
+  color: #393637;
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat';
+  color: #393637;
+  text-transform: uppercase;
+}
+
+a {
+  color: #393637;
+}
+
+a:hover {
+  color: #c88663;
+}
+
+.charcoal {
+  color: #393637;
+}
+
+.blue {
+  color: #afbcc7;
+}
+
+.copper {
+  color: #c88663;
+}
+
+.grey {
+  color: #e2e2e2;
+}
+
+
+/* END GENERAL */
+
+
+
+/* NAVIGATION */
+.fixed-header {
+  position: fixed;
+  top: -170px;
+  z-index: 5000;
+  opacity: 0;
+  width: 100%;
+  background: #fff;
+}
+
+.show-fixed {
+  padding: 10px;
+  opacity: 0.9;
+  top: 0;
+  -webkit-transition: opacity 400ms ease;
+  -moz-transition: opacity 400ms ease;
+  -ms-transition: opacity 400ms ease;
+  -o-transition: opacity 400ms ease;
+  transition: opacity 400ms ease;
+}
+
+.fixed-header ul {
+  margin-top: 6px;
+  margin-bottom: 0px;
+}
+
+.fixed-header li {
+  display: inline;
+  padding-left: 20px;
+  text-transform: uppercase;
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.mobile-header {
+
+}
+
+ul.side-nav {
+  margin-top: 0;
+  text-align: left;
+}
+
+.main-header {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+
+
+.main-footer {
+  background: #e2e2e2;
+  min-height: 200px;
+}
+/* END NAVIGATION */
+
+
+
+
+/* MAIN CONTENT AREA WITH SIDEBAR */
+
+
+/* END MAIN CONTENT AREA WITH SIDEBAR */
+
+/* SLIDE UP */
+.section-slideup {
+  width: 300px;
+  height: 200px;
+  position: fixed;
+  bottom: -170px;
+  right: 40px;
+  z-index: 5000;
+  opacity: 0;
+  border: 1px solid #e2e2e2;
+  padding: 10px;
+}
+
+.slideup {
+  padding: 10px;
+  opacity: 0.9;
+  bottom: 0;
+  -webkit-transition: opacity 800ms ease;
+  -moz-transition: opacity 800ms ease;
+  -ms-transition: opacity 800ms ease;
+  -o-transition: opacity 800ms ease;
+  transition: opacity 800ms ease;
+  background: #fff;
+}
