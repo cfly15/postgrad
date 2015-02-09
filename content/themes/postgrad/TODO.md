@@ -7,7 +7,8 @@
 - [X] Google Analytics
 - [ ] Setup mailgun email with gmail hack (http://simplyian.com/2015/01/07/Hacking-GMail-to-use-custom-domains-for-free/)
 - [ ] Pinterest Pin it button on all images
-- [ ] Add disqus comments on post pages
+- [X] Add disqus comments on post pages
+- [ ] Mailchimp signup form
 
 Instagram Info:
   code: 28d4ce9f88144b379df3b895f46a307e

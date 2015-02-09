@@ -129,6 +129,11 @@ ul.side-nav {
   color: #e2e2e2;
 }
 
+.post img:hover {
+  background: #fff;
+  opacity: 0.4;
+}
+
 /* END MAIN CONTENT AREA WITH SIDEBAR */
 
 /* SLIDE UP */
