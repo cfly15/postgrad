@@ -1,17 +1,18 @@
 {{!< default}}
+<div class="row">
+  <main class="col m8">
+    This is the {{tag.name}} category page
+    {{! This is the post loop - each post will be output using this markup }}
+    {{#foreach posts}}
+      {{title}}
+      <section class="post-excerpt">
+        <p>{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
+      </section>
+    {{/foreach}}
 
-<main>
-  This is the {{tag.name}} category page
-  {{! This is the post loop - each post will be output using this markup }}
-  {{#foreach posts}}
-    {{title}}
-    <section class="post-excerpt">
-      <p>{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
-    </section>
-  {{/foreach}}
+    {{! Previous/next page links - displayed on every page }}
+    {{pagination}}
+  </main>
 
-  {{! Previous/next page links - displayed on every page }}
-  {{pagination}}
-
-
-</main>
+  {{> sidebar}}
+</div>

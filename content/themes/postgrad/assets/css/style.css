@@ -44,7 +44,9 @@ a:hover {
   color: #e2e2e2;
 }
 
-
+.container {
+  width: 96%;
+}
 /* END GENERAL */
 
 
@@ -84,10 +86,6 @@ a:hover {
   font-size: 20px;
 }
 
-.mobile-header {
-
-}
-
 ul.side-nav {
   margin-top: 0;
   text-align: left;
@@ -98,19 +96,38 @@ ul.side-nav {
   margin-bottom: 40px;
 }
 
-
-
 .main-footer {
   background: #e2e2e2;
   min-height: 200px;
 }
 /* END NAVIGATION */
 
-
-
-
 /* MAIN CONTENT AREA WITH SIDEBAR */
 
+.post {
+  margin-bottom: 40px;
+}
+
+.post-category h3 {
+  font-size: 14px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  line-height: 1em;
+}
+
+.post-category h3 a {
+  color: #afbcc7;
+}
+
+.post-title {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.post-meta {
+  text-transform: uppercase;
+  color: #e2e2e2;
+}
 
 /* END MAIN CONTENT AREA WITH SIDEBAR */
 

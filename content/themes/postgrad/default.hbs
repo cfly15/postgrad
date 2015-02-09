@@ -14,6 +14,17 @@
   <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
 
   {{ghost_head}}
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-59496556-1', 'auto');
+  ga('send', 'pageview');
+
+  </script>
 </head>
 <body class="{{body_class}}">
 
@@ -22,45 +33,46 @@
   <div class="container">
     {{{body}}}
   </div>
-
-  <footer class="main-footer valign-wrapper">
-    <section class="center-align valign"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
-    {{ghost_foot}}
-  </footer>
-
-  <!-- Section Slideup -->
-  <section class="section-slideup hide-on-small-and-down">
-    <div class="content">
-      <h2 style="margin-top: 0px; margin-bottom: 0px;">POPUP</h2>
-      <p>Here is the main section for the content</p>
-    </div>
-  </section>
-
-  <!-- Welcome Modal -->
-  <div id="welcomeModal" class="modal modal-close">
-    <h4>Welcome to Post Grad</h4>
-    <p>A blog about choosing your own path</p>
-    <a href="#" class="waves-effect waves-light btn modal-close">Close</a>
-  </div>
+  {{> footer}}
+  {{> sectionSlideup}}
+  {{> welcomeModal}}
 
   {{! import javascript scripts}}
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="{{asset "js/materialize.js"}}"></script>
   <script type="text/javascript" src="{{asset "js/firstImpression.min.js"}}"></script>
+  <script type="text/javascript" src="{{asset "js/underscore-min.js"}}"></script>
   <script type="text/javascript">
 
     // everything document ready
     $( document ).ready(function(){
+      // Allow mobile side nav
       $(".button-collapse").sideNav();
 
+      // check if it's a first time visitor, then show modal
       if ( firstImpression() ) {
         // new visitor should see visitor
-        console.log('New user');
         $('#welcomeModal').openModal();
       } else {
         // existing visitor shouldn't see modal
-        console.log("Previous Visitor");
-      };
+      }
+
+      // Get instagram pictures
+      $.ajax({
+        type: "GET",
+        dataType: "jsonp",
+        url: "https://api.instagram.com/v1/users/190004305/media/recent/?access_token=190004305.5f6fa1e.69bc292015a347ec892d39827c9c8ee1",
+        success: function(data) {
+          var i = 0;
+          var div = document.getElementById('instagram');
+          while(i < 5) {
+            div.innerHTML = div.innerHTML + '<a href="link"><img src="'+data.data[i].images.low_resolution.url+'"/></a>';
+            i++;
+          }
+        }
+      });
+
+
 
     });
 
@@ -85,7 +97,6 @@
       var popup = $(".section-slideup");
       $(window).scroll(function() {
         var scroll = $(window).scrollTop();
-
         if (scroll >= 800) {
           popup.addClass("slideup");
         } else {
