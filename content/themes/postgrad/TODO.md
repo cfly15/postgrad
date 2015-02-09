@@ -1,6 +1,6 @@
 ## Theme To Do List
 
-[] 3 nav bars (main, fixed, )
-[] Initial visitor cookie - welcome modal
-[] Scroll popup on bottom - email signup
-[] Instagram photos
+- [X] 3 nav bars (main, fixed, mobile)
+- [ ] Initial visitor cookie - welcome modal
+- [X] Scroll popup on bottom - email signup
+- [ ] Instagram photos
