@@ -82,8 +82,7 @@ a:hover {
   padding-left: 20px;
   text-transform: uppercase;
   font-family: 'Montserrat';
-  font-weight: 700;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 ul.side-nav {
@@ -94,6 +93,77 @@ ul.side-nav {
 .main-header {
   margin-top: 40px;
   margin-bottom: 40px;
+}
+
+.main-nav {
+  position: relative;
+  margin-top: -90px;
+  margin-bottom: 60px;
+  /*border: 1px solid #e2e2e2;*/
+}
+
+.main-logo {
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  text-align: center;
+  line-height: 0px;
+  background: #fff;
+  width: 160px;
+  z-index: 50;
+}
+
+.nav-left {
+  display: inline-block;
+  width: 50%;
+}
+
+.nav-right {
+  display: inline-block;
+  padding-left: 100px;
+}
+
+.nav-social {
+  display: inline-block;
+  text-align: right;
+  float: right;
+  padding-right: 20px;
+}
+
+.nav-left li {
+  display: inline;
+  font-size: 18px;
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  padding-left: 26px;
+}
+
+.nav-left li:nth-child(1) {
+  padding-left: 0px;
+}
+
+.nav-right li {
+  display: inline;
+  font-size: 18px;
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  padding-left: 26px;
+}
+
+.nav-social li {
+  display: inline;
+  font-size: 18px;
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  padding-right: 12px;
+}
+
+.nav-social li a {
+  color: #c88663;
+}
+
+.nav-social li a:hover {
+  color: #afbcc7;
 }
 
 .main-footer {
@@ -158,6 +228,11 @@ ul.side-nav {
   right: 40px;
   bottom: 20px;
   opacity: 1.0 !important;
+}
+
+#instagram img {
+  width: 100%;
+  padding-left: 20px;
 }
 
 /* END MAIN CONTENT AREA WITH SIDEBAR */

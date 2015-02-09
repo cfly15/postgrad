@@ -9,8 +9,9 @@
 - [X] Pinterest Pin it button on all images (need to fix css)
 - [X] Add disqus comments on post pages
 - [X] Mailchimp signup form
-- [ ] Main header nav (with links on sides)
-- [ ] Social Buttons (font awesome)
+- [X] Main header nav (with links on sides)
+- [X] Social Buttons (font awesome)
+- [ ] Main nav at medium media queries
 
 Instagram Info:
   code: 28d4ce9f88144b379df3b895f46a307e
