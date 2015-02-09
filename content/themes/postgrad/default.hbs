@@ -20,11 +20,7 @@
   {{> header}}
 
   <div class="container">
-
-
     {{{body}}}
-
-
   </div>
 
   <footer class="main-footer valign-wrapper">
@@ -32,22 +28,39 @@
     {{ghost_foot}}
   </footer>
 
-  <section class="section-slideup">
+  <!-- Section Slideup -->
+  <section class="section-slideup hide-on-small-and-down">
     <div class="content">
       <h2 style="margin-top: 0px; margin-bottom: 0px;">POPUP</h2>
       <p>Here is the main section for the content</p>
     </div>
   </section>
 
+  <!-- Welcome Modal -->
+  <div id="welcomeModal" class="modal modal-close">
+    <h4>Welcome to Post Grad</h4>
+    <p>A blog about choosing your own path</p>
+    <a href="#" class="waves-effect waves-light btn modal-close">Close</a>
+  </div>
+
   {{! import javascript scripts}}
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="{{asset "js/materialize.js"}}"></script>
-
+  <script type="text/javascript" src="{{asset "js/firstImpression.min.js"}}"></script>
   <script type="text/javascript">
 
     // everything document ready
     $( document ).ready(function(){
       $(".button-collapse").sideNav();
+
+      if ( firstImpression() ) {
+        // new visitor should see visitor
+        console.log('New user');
+        $('#welcomeModal').openModal();
+      } else {
+        // existing visitor shouldn't see modal
+        console.log("Previous Visitor");
+      };
 
     });
 
