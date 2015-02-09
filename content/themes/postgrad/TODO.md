@@ -6,7 +6,7 @@
 - [X] Instagram photos (could be improved)
 - [X] Google Analytics
 - [X] Setup mailgun email with gmail hack (http://simplyian.com/2015/01/07/Hacking-GMail-to-use-custom-domains-for-free/)
-- [ ] Pinterest Pin it button on all images (need to fix css)
+- [X] Pinterest Pin it button on all images (need to fix css)
 - [X] Add disqus comments on post pages
 - [X] Mailchimp signup form
 - [ ] Main header nav (with links on sides)

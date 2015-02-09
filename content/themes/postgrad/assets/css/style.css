@@ -129,6 +129,16 @@ ul.side-nav {
   color: #e2e2e2;
 }
 
+.pinItWrapper {
+  position: relative;
+}
+
+.pinItWrapper img {
+  position: relative;
+  top: 0;
+  left:0;
+}
+
 .post .pinItWrapper:hover img {
   background: #fff;
   opacity: 0.9;
@@ -143,12 +153,10 @@ ul.side-nav {
   width: 113px;
   height: 117px;
   background: url('../img/pinit-button.png');
-  margin: -147px 0px 0 0;
   z-index: 999;
-  position: relative;
-  float:right;
+  position: absolute;
   right: 40px;
-  bottom: 0px;
+  bottom: 20px;
   opacity: 1.0 !important;
 }
 
