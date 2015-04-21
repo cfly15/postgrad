@@ -1,6 +1,8 @@
 {{!< default}}
 <div class="row">
-  <main class="col m8">
+  {{> sidebar}}
+
+  <main class="col s12 m8">
     This is the {{tag.name}} category page
     {{! This is the post loop - each post will be output using this markup }}
     {{#foreach posts}}
@@ -14,5 +16,5 @@
     {{pagination}}
   </main>
 
-  {{> sidebar}}
+
 </div>

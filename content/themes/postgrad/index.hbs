@@ -1,29 +1,101 @@
 {{!< default}}
 
 <div class="row">
-  <main class="col m8">
+  {{> sidebar}}
+
+  <main class="col s12 m8">
     {{! This is the post loop - each post will be output using this markup }}
     {{#foreach posts}}
+
+    {{#if @first}}
+    <div class="col s12">
+
     <article class="{{post_class}}">
-      <div class="post-category">
-        <h3>{{tags}}</h3>
-      </div>
+      <div class="post-divider"></div>
+
       <header class="post-header">
         <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
-        <div class="post-meta">
-          by {{author}} on <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM DD YYYY"}}</time>
+        <div class="post-category">
+          <h3>{{tags}}</h3>
         </div>
       </header>
+
+      <div class="post-featured-image">
+        {{#if image}}<img src={{image}} width="100%" />{{/if}}
+      </div>
+
       <section class="post-excerpt">
-        <p class="flow-text">{{excerpt words="65"}} <a class="read-more" href="{{url}}"> ... read more</a></p>
+        {{content}}
+        <!-- <p>{{excerpt words="65"}} <a class="read-more" href="{{url}}"> ... read more</a></p> -->
       </section>
 
+      <section class="post-footer">
+        <div class="left social">
+          <ul class="nav-social-post">
+            <li><a href="#"><i class="fa fa-twitter icon-circle"></i></li>
+            <li><a href="#"><i class="fa fa-pinterest icon-circle"></i></a></li>
+            <li><a href="#"><i class="fa fa-facebook icon-circle"></i></a></li>
+          </ul>
+
+          <p class="post-share">share</p>
+        </div>
+
+        <div class="right post-meta">
+          <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MM.DD.YYYY"}}</time>
+          <br/>
+          {{author}}
+        </div>
+      </section>
+
+      <div class="post-divider"></div>
+
     </article>
+
+  </div>
+
+    {{else}}
+
+    <div class="col s12 m6">
+
+      <article class="{{post_class}} ">
+        <div class="post-featured-image">
+          {{#if image}}<img src={{image}} width="100%" />{{/if}}
+        </div>
+
+        <header class="post-header">
+          <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+          <div class="post-category">
+            <h3>{{tags}}</h3>
+          </div>
+        </header>
+
+        <section class="post-excerpt">
+          <p>{{excerpt words="65"}}</p>
+        </section>
+
+        <section class="post-footer2">
+          <div class="more">
+            <a href="{{url}}" class="more-button">MORE</a>
+          </div>
+        </section>
+
+        <div class="post-divider"></div>
+
+      </article>
+
+    </div>
+
+    {{/if}}
     {{/foreach}}
+
+    <div class="col s12">
     {{! Previous/next page links - displayed on every page }}
     {{pagination}}
+
+    </div>
+
   </main>
 
-  {{> sidebar}}
+
 
 </div>

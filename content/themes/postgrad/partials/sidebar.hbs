@@ -1,3 +1,81 @@
-<aside class="col m4">
+<aside class="col s4 m4 hide-on-small-only" style="padding-right: 60px;">
+  <div class="logo">
+    <a href="/"><img src="{{asset 'img/logo.png'}}" width="100%"/></a>
+  </div>
+
+  <div class="erinHeadshot">
+    <a href="/about-me"><img src="{{asset 'img/erin.png'}}"/></a>
+  </div>
+
+  <div class="tagline">
+    <h1>DESIGN<br/>YOUR OWN PATH</h1>
+  </div>
+
+  <div class="sidebar-about">
+    <p>
+      This is where a little welcome area would go on your sidebar.
+      You can essentially put whatever you'd like in here, and
+      what I am typing is just filler text of course. We can end the whole thing with a
+      simple read link about. <a href="/about-me" class="bold">READ MORE ...</a>
+    </p>
+  </div>
+
+  <ul class="nav-social">
+    <li><a href="https://twitter.com/realitychicblog"><i class="fa fa-twitter icon-circle"></i></a></li>
+    <li><a href="https://instagram.com/realitychicblog/"><i class="fa fa-instagram icon-circle"></i></a></li>
+    <li><a href="https://www.pinterest.com/realitychic/"><i class="fa fa-pinterest icon-circle"></i></a></li>
+    <li><a href="https://www.facebook.com/efly33"><i class="fa fa-facebook icon-circle"></i></a></li>
+  </ul>
+
+  <div class="links">
+    <div class="sidebar-divider"></div>
+    <ul class="nav-links">
+      <li><a href="/about-blog">ABOUT BLOG</a></li>
+      <li class="vertical-divider">|</li>
+      <li><a href="/about-me">ABOUT ME</a></li>
+    </ul>
+    <div class="sidebar-divider"></div>
+  </div>
+
+
   <div id="instagram"></div>
+  <p class="instagram-username"><a href="https://instagram.com/realitychicblog/">@REALITYCHICBLOG</a></p>
+  <div class="sidebar-divider"></div>
+
+  <div class="popular-posts">
+    <h1>POPULAR</h1>
+    <section class="popular-post">
+      <a href="#"><img src="{{asset 'img/placeholder.png'}}" width="100%"/></a>
+    </section>
+    <section class="popular-post">
+      <a href="#"><img src="{{asset 'img/placeholder.png'}}" width="100%"/></a>
+    </section>
+    <section class="popular-post">
+      <a href="#"><img src="{{asset 'img/placeholder.png'}}" width="100%"/></a>
+    </section>
+  </div>
+  <div class="sidebar-divider"></div>
+
+  <div class="curriculum">
+    <h1>ERIN'S CURRICULUM</h1>
+    <section class="popular-post">
+      <a href="#"><img src="{{asset 'img/placeholder.png'}}" width="100%"/></a>
+    </section>
+    <ul class="finds">
+      <li><a href="#">A FIND GOES HERE</a></li>
+      <li><a href="#">ANOTHER GOES HERE</a></li>
+      <li><a href="#">AND ONE LAST ONE</a></li>
+    </ul>
+    <div class="more">
+      <a href="#" class="more-button">MORE</a>
+    </div>
+  </div>
+  <div class="sidebar-divider"></div>
+
+  <div class="copyright">
+    <section class="center-align valign"><a href="{{@blog.url}}">&copy; {{date format="YYYY"}} {{@blog.title}} CO.</a></section>
+  </div>
+
+  <div class="sidebar-divider" style="margin-bottom: 500px;"></div>
+
 </aside>

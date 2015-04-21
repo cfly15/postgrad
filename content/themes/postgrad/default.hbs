@@ -31,7 +31,7 @@
 
   {{> header}}
 
-  <div class="container">
+  <div class="container main-content">
     {{{body}}}
   </div>
   {{> footer}}
@@ -66,7 +66,7 @@
         success: function(data) {
           var i = 0;
           var div = document.getElementById('instagram');
-          while(i < 5) {
+          while(i < 4) {
             div.innerHTML = div.innerHTML + '<a href="link"><img src="'+data.data[i].images.low_resolution.url+'"/></a>';
             i++;
           }
@@ -93,7 +93,7 @@
         var media = "http://"+window.location.host+$(img).attr('src');
         var mediaRes = encodeURI(media);
         $(img).parent().addClass('pinItWrapper');
-        $(img).parent().append("<a href='http://pinterest.com/pin/create/button/?url="+res+"&media="+mediaRes+"&description="+"' target='_blank' class='pinItButton'></a>");
+        $(img).parent().append("<a href='http://pinterest.com/pin/create/button/?url="+res+"&media="+mediaRes+"&description="+"' target='_blank' class='pinItButton'><span class='pin-this'>pin this</span></a>");
 
 
       });
@@ -117,14 +117,17 @@
 
     // slideup
     $(function() {
-      //caches a jQuery object containing the header element
       var popup = $(".section-slideup");
+      var popupcontent = $('.slideup-content');
       $(window).scroll(function() {
         var scroll = $(window).scrollTop();
-        if (scroll >= 800) {
+        if (scroll >= 2200) {
+          popup.show();
+          popupcontent.show();
           popup.addClass("slideup");
         } else {
           popup.removeClass("slideup");
+          popupcontent.hide();
         }
       });
     });

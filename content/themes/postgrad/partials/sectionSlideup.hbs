@@ -1,7 +1,32 @@
 <!-- Section Slideup -->
-<section class="section-slideup hide-on-small-and-down">
-  <div class="content">
-    <h2 style="margin-top: 0px; font-size: 16px; margin-bottom: 0px;">Stay up to date</h2>
-    {{> mailchimp}}
+<section class="section-slideup hide-on-small-and-down" style="display:none;">
+<div class="main-content container">
+  <div class="row">
+    <div class="col s4" style="padding-right: 60px;">
+
+        <div class="slideup-content" style="display:none;">
+          <div class="newsletter-mark-container">
+            <img class="newsletter-mark" src="{{asset 'img/newsletter-mark.png'}}"/>
+          </div>
+          <p class="newsletter-p">JOIN THE</p>
+          <p class="newsletter-h1">#POSTGRADCHALLENGE</p>
+
+          {{> mailchimp}}
+
+          <p class="newsletter-p">ONE EMAIL</p>
+          <p class="newsletter-p">ONE CHALLENGE</p>
+          <p class="newsletter-p">EACH WEEK</p>
+
+          <!-- <div class="newsletter-divider"></div>
+
+          <p class="newsletter-cursive">because</p>
+          <p class="newsletter-p">BEING A GROWN UP</p>
+          <p class="newsletter-p">IS HARD</p> -->
+        </div>
+
+    </div>
+
+    <div class="col s8"></div>
   </div>
+</div>
 </section>

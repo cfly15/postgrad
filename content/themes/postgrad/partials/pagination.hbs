@@ -1,9 +1,9 @@
 <div class="pagination">
   {{#if prev}}
-  <a class="newer-posts" href="{{page_url prev}}">&larr; Newer Posts</a>
+  <a class="newer-posts bold left" href="{{page_url prev}}"><img src="{{asset 'img/older-posts.png'}}"> <span class="pagination-text">NEWER POSTS</span></a>
   {{/if}}
-  <span class="page-number">Page {{page}} of {{pages}}</span>
+
   {{#if next}}
-  <a class="older-posts" href="{{page_url next}}">Older Posts &rarr;</a>
+    <a class="older-posts bold right" href="{{page_url next}}"><span class="pagination-text">OLDER POSTS</span> <img src="{{asset 'img/newer-posts.png'}}"></a>
   {{/if}}
 </div>

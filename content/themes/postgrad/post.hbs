@@ -1,18 +1,23 @@
 {{!< default}}
 <div class="row">
-  <main class="col m8">
+  {{> sidebar}}
+
+  <main class="col s12 m8">
     {{#post}}
-    <article class="{{post_class}}">
-      <div class="post-category">
-        <h3>{{tags}}</h3>
-      </div>
+      <div class="post-divider"></div>
+
       <header class="post-header">
         <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
-        <div class="post-meta">
-          by {{author}} on <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM DD YYYY"}}</time>
+        <div class="post-category">
+          <h3>{{tags}}</h3>
         </div>
       </header>
-      <div class="flow-text">
+
+      <div class="post-featured-image">
+        {{#if image}}<img src={{image}} width="100%" />{{/if}}
+      </div>
+
+      <div class="post-content">
         {{content}}
       </div>
     </article>
@@ -21,6 +26,6 @@
     {{> disqus}}
   </main>
 
-{{> sidebar}}
+
 
 </div>
