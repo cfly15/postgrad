@@ -6,12 +6,23 @@
         <a href="/" class="brand-logo"><img src="{{asset "img/mark.png"}}" /></a>
 
         <ul class="left fixed-nav hide-on-med-and-down">
-          <li><a href="/tag/lessons">Lessons</a></li>
-          <li><a href="/tag/nest">Nest</a></li>
-          <li><a href="/tag/style">Style</a></li>
-          <li><a href="/tag/quotables">Quotables</a></li>
-          <li><a href="/tag/bookmarks">Bookmarks</a></li>
-          <li><a href="/tag/#postgradchallenge">#postgradchallenge</a></li>
+          <li>
+            <a href="/tag/lessons">Lessons</a>
+            <ul style="margin-left: 0px;">
+              <li><a href="/tag/path">Path</a></li>
+              <li><a href="/tag/style">Style</a></li>
+              <li><a href="/tag/career">Career</a></li>
+              <li><a href="/tag/house-tour">House Tour</a></li>
+            </ul>
+          </li>
+          <li><a href="/tag/assignments">Assignments</a></li>
+          <li>
+            <a href="/tag/curriculum">Curriculum</a>
+            <ul style="margin-left: 0px;">
+              <li><a href="/tag/bookmarks">Bookmarks</a></li>
+              <li><a href="/tag/quotables">Quotables</a></li>
+            </ul>
+          </li>
         </ul>
 
         <div class="right hide-on-med-and-down">
@@ -43,14 +54,18 @@
       <li><a href="/about-blog">About Blog</a></li>
       <li><a href="/about-me">About Me</a></li>
       <li><a href="/tag/lessons">Lessons</a></li>
-      <li><a href="/tag/nest">Nest</a></li>
-      <li><a href="/tag/style">Style</a></li>
-      <li><a href="/tag/quotables">Quotables</a></li>
-      <li><a href="/tag/bookmarks">Bookmarks</a></li>
-      <li><a href="/tag/#postgradchallenge">#postgradchallenge</a></li>
+        <!-- <li><a href="/tag/path">Path</a></li>
+        <li><a href="/tag/style">Style</a></li>
+        <li><a href="/tag/career">Career</a></li>
+        <li><a href="/tag/house-tour">House Tour</a></li> -->
+      <li><a href="/tag/assignments">Assignments</a></li>
+      <li><a href="/tag/curriculum">Curriculum</a></li>
+        <!-- <li><a href="/tag/bookmarks">Bookmarks</a></li>
+        <li><a href="/tag/quotables">Quotables</a></li> -->
+
       <li>
         <div class="copyright">
-          <section class="center-align valign"><a href="{{@blog.url}}">&copy; {{date format="YYYY"}} {{@blog.title}} CO.</a></section>
+          <section class="center-align valign"><a href="{{@blog.url}}">&copy; {{date format="YYYY"}} {{@blog.title}}</a></section>
         </div>
       </li>
     </ul>
